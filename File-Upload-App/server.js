@@ -34,6 +34,7 @@ server.on('request', (request, response) => {
         // when sending a response to a user we must have 3 things
         response.statusCode = 404;
         response.setHeader('X-Powered-By', 'Fred');
+        response.setHeader('Content-Type', 'application/json')
         response.end("bye")  //close connection
     }
 
