@@ -21,7 +21,13 @@ server.on('request', (request, response) => {
 
     const parsedUrl = url.parse(request.url, true) // for query string
 
-    console.log(parsedUrl.pathname);
+    //console.log(parsedUrl.pathname);
+
+    if (request.method === 'GET' && parsedUrl === '/metadata') {
+        const id = parsedUrl.query.id;
+        console.log(id);
+        
+    }
 
     
 
