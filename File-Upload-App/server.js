@@ -14,18 +14,22 @@ const port = 8000;
 
 // when server is on request
 server.on('request', (request, response) => {
-    console.log(" this is an incoming request...");
-    console.log(`The request method is: "${request.method}", and the url is "${request.url}"`);
+    // console.log(" this is an incoming request...");
+    // console.log(`The request method is: "${request.method}", and the url is "${request.url}"`);
 
     // checking the request.url method  using the url module
-
-    const parsedUrl = url.parse(request.url, true) // for query string
+    console.log("hey");
+    
+    const parsedUrl = url.parse(request.url, true); // for query string
 
     //console.log(parsedUrl.pathname);
 
-    if (request.method === 'GET' && parsedUrl === '/metadata') {
-        const id = parsedUrl.query.id;
+    if (request.method === 'GET' && parsedUrl.pathname === '/metadata') {
+        const { id } = parsedUrl.query;
         console.log(id);
+        const metadata = services.fetchImageMetadata(id);
+        console.log(metadata);
+        
         
     }
 
