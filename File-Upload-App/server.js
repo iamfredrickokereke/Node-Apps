@@ -4,6 +4,8 @@ const http = require('http');
 
 const url = require('url');
 
+const services = require('./services')
+
 // create server
 const server = http.createServer();
 
