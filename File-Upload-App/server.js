@@ -8,7 +8,7 @@ const port = 8000;
 server.on('request', (request, response) => {
     console.log(" this is an incoming request...");
 
-    console.table(request.method, request.url);
+    console.log(`The request method is: "${request.method}", and the url is "${request.url}"`);
     
     
 })
