@@ -17,7 +17,7 @@ server.on('request', (request, response) => {
 
     // checking the request.url method  using the url module
 
-    const parsedUrl = url.parse(request.url, true)
+    const parsedUrl = url.parse(request.url, true) // for query string
 
     console.log(parsedUrl.pathname);
 
