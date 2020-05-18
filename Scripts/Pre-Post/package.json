@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fred": "echo \"Hello Fred\" "
+    "fred": "echo \"Hello Fred\" ",
+    "ignore": "echo \"\" >> .gitignore",
+    "preignore": "touch .gitignore",
+    "postignore": "echo \".gitignore\n.vscode/\nnode_modules/\" >> .gitignore"
   },
   "keywords": [],
   "author": "",
