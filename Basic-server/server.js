@@ -9,10 +9,11 @@ const server = http.createServer( (request, response) => {
     response.setHeader('Access-Control-Allow-Origin', '*'); //cors
     response.writeHead(200); //status code - OK
 
-    let dataObject = {"id": 1234, "name":"kelly", "sex":"male"};
+    let dataObject = {"id": 1234, "name":"kelly", "sex":"male", "email":"kelly@work.org"};
 
-    let data = JSON.stringify(dataObject);
+    let data = JSON.stringify(dataObject);// return json object to string
 
+    throw new Error('works')
 
     response.end(data);
 });
