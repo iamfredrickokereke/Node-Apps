@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/iamfredrickokereke/Node-Apps/issues"
   },
-  "homepage": "https://github.com/iamfredrickokereke/Node-Apps#readme"
+  "homepage": "https://github.com/iamfredrickokereke/Node-Apps#readme",
+  "dependencies": {
+    "debug": "^4.1.1"
+  }
 }
